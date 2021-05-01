@@ -1,0 +1,52 @@
+.jumbotron {
+  background-color: white;
+}
+
+div {
+  margin-top: 10px;
+}
+
+button {
+  width: 130px;
+}
+
+.container {
+  position: relative;
+}
+
+/* Reset the Count Button */
+button.resetButton {
+  position: absolute;
+  top: 130px;
+}
+
+/* Section class containing input filed , button and the list of records added */
+.section {
+  position: absolute;
+  top: 210px;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+/* Sticking the input field and Add button at the top of the page when scrolled */
+.stickyElement {
+  position: sticky;
+  top: 5px;
+}
+
+/* Error Class for when no input is given */
+.error {
+  display: block;
+  position: absolute;
+  top: 46px;
+  width: 20%;
+  margin-top: 10px;
+  display: block;
+}
+
+/* Styling the Horizontal line */
+hr.line {
+  border: 1px solid red;
+}
+
+/* #e9ecef */

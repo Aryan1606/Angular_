@@ -1,0 +1,38 @@
+<div class="jumbotron">
+    <div class="container">
+        <section>
+            <h4 class="countValue">Count: <h3 style="color: red; display: inline-block;">{{count}}</h3> </h4>
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary active addButton " (click)="onDisplay()">Display Detail</button>
+                </div>
+                <div class="col-10">
+                    <p *ngIf="buttonClick"  #paragraph>{{para}}</p>
+                </div>
+            </div>
+            <button class="btn btn-danger active resetButton" (click)="onReset()" #reset style="display: none; ">Reset Count </button>
+        </section>
+        <br><br><br>
+
+        <section class="section">  
+            <hr class="line"> 
+            <br>
+            <div>
+                <div class="stickyElement">
+                    <input type="text" class="form-control-lg" placeholder="Type Something.." [(ngModel)]="data" #firstName="ngModel"  required >
+                    <button class="btn btn-success active" style="margin-left: 10px;" (click)="onAdd()" #add>Add</button>
+                    <h6 class="alert alert-danger error" style="display: none;" #error></h6>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div>
+                    <div *ngFor="let item of list; let i=index" [ngStyle]="{'background-color':getColor(i)}">
+                    <h4>{{i+1}}. <h3 style="display: inline;">{{item}}</h3></h4>
+                    </div>
+                </div>
+            </div> 
+        </section>  
+    </div>
+</div>
+
